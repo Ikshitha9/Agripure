@@ -1,0 +1,242 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    display: inline-flex;
+    width: 100%;
+}
+
+/*.header-content {
+    display: flex; /* Use flexbox for layout */
+    /*justify-content: space-between; /* Space between logo and other content */
+    /*align-items: center; /* Center items vertically */
+    /*padding: 10px 20px; /* Add padding around the header */
+/*}*/
+
+.header-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+.header-right {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    margin-left:1000px; /* Push this section to the right */
+}
+
+.cart-icon {
+    font-size: 30px; /* Size of the cart icon */
+    cursor: pointer; /* Change cursor to pointer */
+    margin-left: 20px; /* Spacing from the logo */
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.hero {
+    background-color: #e7f5e8;
+    padding: 30px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Sidebar Navigation Styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.close-btn {
+    font-size: 36px;
+    margin-left: 15px;
+}
+
+/* Slideshow styles */
+        .slideshow {
+    position: relative;
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide overflow to avoid scrollbars */
+}
+
+.slideshow-container {
+    display: flex; /* Use flexbox to arrange slides horizontally */
+}
+
+.slide {
+    min-width: 50%; /* Each slide takes 50% width, so two will fit */
+    box-sizing: border-box; /* Include padding and borders in width */
+}
+
+.slide img {
+    width: 100%; /* Make images responsive */
+    display: block; /* Ensure no space below images */
+}
+
+button.prev, button.next {
+    position: absolute; /* Position buttons over the slides */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 10px; /* Add padding */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+button.prev {
+    left: 10px; /* Position left */
+}
+
+button.next {
+    right: 10px; /* Position right */
+}
+
+
+
+.text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Product Grid Styles */
+.product-grid {
+    padding: 20px;
+}
+
+.product-grid h2 {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.logo {
+    height: 90px; /* Set logo height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/*.header-right {
+    display: flex; /* Flexbox for right-aligned content */
+    /*align-items: center; /* Center items vertically */
+/*}*/
+
+.cart-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    right: 0; /* Align to the right */
+    top: 0; /* Align to the top */
+    width: 300px; /* Width of the cart */
+    height: 100%; /* Full height */
+    overflow-y: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+}
+
+.cart-content {
+    background-color: #fefefe; /* Background color of the cart */
+    padding: 20px;
+    border-left: 1px solid #888; /* Border on the left side */
+    height: 100%; /* Full height */
+}
+
+.cart-content h2 {
+    margin: 0;
+}
+
+.cart-content .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding-left: 100px;
+}
+
+.cart-content .close:hover,
+.cart-content .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 100px;
+}
+
+

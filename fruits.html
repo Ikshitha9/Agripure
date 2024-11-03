@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRIPURE - Organic Products</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+    <div class="header-content">
+        <span class="menu-icon" onclick="toggleNav()">&#9776;</span> <!-- Menu Icon -->
+        <img src="logo.png" alt="AGRIPURE Logo" class="logo"> <!-- Logo Image -->
+        <div class="header-right">
+            <span class="cart-icon" onclick="toggleCart()">🛒 Cart</span>
+        </div>
+    </div>
+    </header>
+
+    
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="fruits.html">Fruits</a>
+        <a href="vegetables.html">Vegetables</a>
+        <a href="dairy.html">Dairy</a>
+        <a href="meat.html">Meat</a>
+        <a href="drinks.html">Drinks</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Fresh, Organic, and Healthy</h2>
+        <img src="logo.png">
+        <p>Discover the best organic products delivered straight to your door.</p>
+        <button>Shop Now</button>
+    </section>
+
+    <!-- Products Grid Section -->
+    <section class="product-grid">
+        <h2>Fruits</h2>
+        <div class="grid-container">
+            <div class="product-item">
+                <img src="apples.jpg" alt="Apples">
+                <h3>Fresh Apples</h3>
+                <p>$3.00 / kg</p>
+                <button onclick="addToCart('Fresh Apples', 3.00)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="bananas.webp" alt="Bananas">
+                <h3>Organic Bananas</h3>
+                <p>$2.50 / kg</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="carrots.jpg" alt="Carrots">
+                <h3>Organic Carrots</h3>
+                <p>$2.00 / kg</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="milk.avif" alt="Milk">
+                <h3>Fresh Milk</h3>
+                <p>$1.50 / liter</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="chicken.png" alt="Chicken">
+                <h3>Organic Chicken</h3>
+                <p>$5.00 / kg</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="juices.png" alt="Juice">
+                <h3>Orange Juice</h3>
+                <p>$2.00 / liter</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="tomatoes.png" alt="Tomatoes">
+                <h3>Fresh Tomatoes</h3>
+                <p>$3.00 / kg</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="potatoes.png" alt="Potatoes">
+                <h3>Organic Potatoes</h3>
+                <p>$1.80 / kg</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="yoghurt.png" alt="Yogurt">
+                <h3>Greek Yogurt</h3>
+                <p>$4.00 / kg</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="beef.png" alt="Beef">
+                <h3>Grass-fed Beef</h3>
+                <p>$10.00 / kg</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="coconut.png" alt="Coconut Water">
+                <h3>Coconut Water</h3>
+                <p>$2.50 / liter</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+        <span class="close" onclick="toggleCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>The Agripure website is a comprehensive platform that not only showcases the brand's products but also educates and engages its audience. With a focus on sustainability and community, it effectively communicates Agripure's values and mission, making it a valuable resource for customers interested in high-quality agricultural products.</p>
+        <p>&copy; 2024 AGRIPURE. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:support@agripure.com">support@agripure.com</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <script>
+        // Slideshow JavaScript
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function toggleNav() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+        }
+    </script>
+
+</body>
+</html>

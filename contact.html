@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRIPURE - Organic Products</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+    <div class="header-content">
+        <span class="menu-icon" onclick="toggleNav()">&#9776;</span> <!-- Menu Icon -->
+        <img src="logo.png" alt="AGRIPURE Logo" class="logo"> <!-- Logo Image -->
+        <div class="header-right">
+            <span class="cart-icon" onclick="toggleCart()">🛒 Cart</span>
+        </div>
+    </div>
+    </header>
+
+    
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="fruits.html">Fruits</a>
+        <a href="vegetables.html">Vegetables</a>
+        <a href="dairy.html">Dairy</a>
+        <a href="meat.html">Meat</a>
+        <a href="drinks.html">Drinks</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+     <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+     <!-- Slideshow Section -->
+    <section class="slideshow">
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="logo1.png" alt="Deal 1">
+            </div>
+            <div class="slide">
+                <img src="1.png" alt="Deal 2">
+            </div>
+            <div class="slide">
+                <img src="logo1.png" alt="Deal 3">
+            </div>
+            <div class="slide">
+                <img src="1.png" alt="Deal 4">
+            </div>
+            <div class="slide">
+                <img src="logo.png" alt="Deal 5">
+            </div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+
+    <div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+        <span class="close" onclick="toggleCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>The Agripure website is a comprehensive platform that not only showcases the brand's products but also educates and engages its audience. With a focus on sustainability and community, it effectively communicates Agripure's values and mission, making it a valuable resource for customers interested in high-quality agricultural products.</p>
+        <p>&copy; 2024 AGRIPURE. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:support@agripure.com">support@agripure.com</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <script>
+        // Slideshow JavaScript
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function toggleNav() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+        }
+    </script>
+
+</body>
+</html>
+
+
+   
+
+
